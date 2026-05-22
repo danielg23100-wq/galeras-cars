@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(!isset($_SESSION['user_id'])){
+    header('refresh:0;url=index.php');}
+    ¿>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,6 +52,14 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
+
+            <!-- Nav Item - Vehicles -->
+            <li class="nav-item active">
+                <a class="nav-link" href="vehicles.html">
+                    <i class="fas fa-fw fa-car-alt"></i>
+                    <span>Vehicles</span></a>
+            </li>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">
