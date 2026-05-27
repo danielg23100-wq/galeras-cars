@@ -1,10 +1,10 @@
 <?php
 session_start();
-if(!isset($_SESSION['user_id'])){
+if(isset($_SESSION['user_id'])){
     header('refresh:0;url=index.php');
 }
 //data base connection
-require('/config/database.php');
+require('config/database.php');
 
 //Get data from login form
 $e_mail = $_POST['email'];
@@ -37,7 +37,7 @@ if($res){
         header ('refresh: 0;url=index.php');
     }else{
         echo "<script> alert ('Email or password not found.') </script>";
-        header ('refresh: 0;url=signin.html');
+        header ('refresh: 0;url=signin.php ');
 
     }
 
